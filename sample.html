@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ultimate To-Do List</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="sample.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>🌟 Ultimate To-Do List</h1>
+      <button id="theme-toggle" class="theme-btn">
+        <i class="fas fa-moon"></i>
+      </button>
+    </div>
+
+    <div class="input-section">
+      <input type="text" id="task-input" placeholder="What needs to be done?" />
+      <input type="text" id="category-input" placeholder="Category (optional)" />
+      <button onclick="addTask()" class="add-btn">
+        <i class="fas fa-plus"></i> Add
+      </button>
+    </div>
+
+    <div class="repeat-section">
+      <label class="toggle-switch">
+        <input type="checkbox" id="repeat-checkbox" />
+        <span class="slider"></span>
+        <span class="label-text">Repeat Task</span>
+      </label>
+
+      <div class="repeat-options" id="repeat-options">
+        <div class="days-selector">
+          <div class="days-grid">
+            <button class="day-btn" data-day="Monday">Mon</button>
+            <button class="day-btn" data-day="Tuesday">Tue</button>
+            <button class="day-btn" data-day="Wednesday">Wed</button>
+            <button class="day-btn" data-day="Thursday">Thu</button>
+            <button class="day-btn" data-day="Friday">Fri</button>
+            <button class="day-btn" data-day="Saturday">Sat</button>
+            <button class="day-btn" data-day="Sunday">Sun</button>
+          </div>
+        </div>
+
+        <label class="toggle-switch">
+          <input type="checkbox" id="set-reminder" />
+          <span class="slider"></span>
+          <span class="label-text">Set Reminder</span>
+        </label>
+        
+        <input type="time" id="time-input" class="time-input" />
+      </div>
+    </div>
+
+    <div id="task-list-container"></div>
+  </div>
+
+  <div id="alert-container"></div>
+
+  <script src="sample.js"></script>
+</body>
+</html>
